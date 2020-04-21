@@ -18,7 +18,7 @@ read susername
 echo "System Password:"
 read spassword
 
-echo "Host to connect to:"
+echo "IP of Host to connect to:"
 read connhost
 
 extraparams=$1
