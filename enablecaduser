@@ -1,0 +1,3 @@
+#! /bin/bash
+
+sudo sed -i 's/caduser:x:1003:1003:Caduser,,,,:\/home\/caduser:\/bin\/true/caduser:x:1003:1003:Caduser,,,,:\/home\/caduser:\/bin\/bash/g' /etc/passwd
