@@ -1,3 +1,3 @@
 #! /bin/bash
 
-echo "" ~/.config/freerdp/known_hosts
+echo "" > ~/.config/freerdp/known_hosts
