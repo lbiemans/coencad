@@ -1,0 +1,20 @@
+#! /bin/bash
+
+src="/etc/letsencrypt/archive/off.cccl.nl"
+dst="/app/onlyoffice/DocumentServer/data/certs"
+
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 
+   exit 1
+fi
+
+# Check if there is a new certificate
+
+md5sum -c $src/fullchain4.pem $dst/onlyoffice.crt
+
+# Copy key and certificate to the container storage
+#cp $src/fullchain4.pem $dst/onlyoffice.crt
+#cp $src/privkey4.pem $dst/onlyoffice.key
+
+# Restart the container
+#docker restart only_office
